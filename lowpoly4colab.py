@@ -40,7 +40,7 @@ def import_usdz(file_path):
 @app.command()
 def execute(
     file_path: str = typer.Option(..., prompt="File path where" , help="Path to the file to be processed"),
-    source_object_name: str = typer.Option(..., prompt="Source object name", help="Name of the source object"),
+    source_object_name: str = 'Mesh',
     target_faces: int = typer.Option(7500, prompt="Target faces", help="Number of faces for the quad remesher"),
     texture_resolution: int = typer.Option(2048, prompt="Texture resolution", help="Resolution of the texture"),
     multiresolution_levels: int = typer.Option(3, prompt="Multiresolution levels", help="Number of multiresolution levels"),
